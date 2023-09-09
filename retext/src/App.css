@@ -1,0 +1,23 @@
+:root {
+  --bg-color: rgb(20,20,20);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Roboto', sans-serif;
+  min-width: 400px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 24px;
+}
+
+.head {
+  font-weight: 400;
+}
+
+.sub-head {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 16px;
+}
+
