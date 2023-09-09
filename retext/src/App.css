@@ -1,14 +1,18 @@
 :root {
   --bg-color: rgb(20,20,20);
+  clear: both;
 }
 
 body {
   background-color: var(--bg-color);
   font-family: 'Roboto', sans-serif;
-  min-width: 400px;
-  margin: 0px;
-  padding: 0px;
+  padding: 10px;
   font-size: 24px;
+}
+
+.main-container {
+  position: relative;
+  height: 100px;
 }
 
 .head {
@@ -21,3 +25,7 @@ body {
   font-size: 16px;
 }
 
+.API-call {
+  height: 100px;
+  background-color: purple;
+}

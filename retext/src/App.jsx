@@ -13,6 +13,7 @@ function App() {
 
       </div>
       <div className = "rephrashed-el">
+        
         <h4 className="sub-head">Concise, less wordy</h4>
         <div className="API-call">{/* API Call here */}</div>
         <h4 className="sub-head">Clearer, more verbose</h4>
