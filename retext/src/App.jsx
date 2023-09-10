@@ -1,23 +1,21 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
+ 
   return (
-   <div className = "main-container">
-      <div className = "rectified-el">
+   <div className='cards'>
+      <div className = "card">
         <h3 className='head'>Rectified</h3>
-
-        <h4 className='head'>Rephrased</h4>
-
+        <div className="content">{/* API Call here */}</div>
       </div>
-      <div className = "rephrashed-el">
-        
+
+      <div className = "card">
+        <h4 className='head'>Rephrased</h4>
         <h4 className="sub-head">Concise, less wordy</h4>
-        <div className="API-call">{/* API Call here */}</div>
+        <div className="content">{/* API Call here */}</div>
         <h4 className="sub-head">Clearer, more verbose</h4>
-        <div className="API-call">{/* API Call here */}</div>
+        <div className="content">{/* API Call here */}</div>
       </div>
     </div>
   )
