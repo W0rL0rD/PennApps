@@ -1,6 +1,7 @@
 import './App.css'
 import React,{ useState, useEffect } from "react";
-import Clipboard from 'react-clipboard-animation'
+import Clipboard from 'react-clipboard-animation';
+import axios from "axios";
 
 function App() {
   // All States
@@ -27,11 +28,26 @@ function App() {
       axios.post("http://127.0.0.1:8000/verbose", { sentence: highlightedText })
            .then(res => setVerbose(res.data.completion))
 
-      axios.post("http://127.0.0.1:8000/formalize", { sentence: highlightedText })
-           .then(res => setFormal(res.data.completion))
-
     }
   }
+
+  useEffect( () => {
+    if (window.getSelection) {
+
+      const highlightedText = window.getSelection().toString()
+
+      console.log(highlightedText)
+
+      axios.post("http://127.0.0.1:8000/rectify", { sentence: highlightedText })
+           .then(res => setRectified(res.data.completion))
+
+      axios.post("http://127.0.0.1:8000/concise", { sentence: highlightedText })
+           .then(res => setConcise(res.data.completion))
+
+      axios.post("http://127.0.0.1:8000/verbose", { sentence: highlightedText })
+           .then(res => setVerbose(res.data.completion))
+    }
+  }, [])
 
   useEffect(() => {
     const timeout1 = setTimeout(() => {
@@ -143,9 +159,6 @@ function App() {
         </div>
 
       </div>
-
-    <button onClick={handleClick}>Create</button>
-    <h1> Hello there, how has your wonderful day been today till now!</h1>
     </div>
   </>
 )
