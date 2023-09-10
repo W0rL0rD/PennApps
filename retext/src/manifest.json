@@ -1,0 +1,15 @@
+{
+	"name": "ReText",
+	"manifest_version": 3,
+	"version": "1.0",
+	"icons": {
+		"16":"../images/16-logo.jpeg",
+		"48":"../images/48-logo.jpeg",
+		"128":"../images/128-logo.jpeg"
+	},
+	"description": "An AI based text processing tool to rectify and simplify your texts so that your texting experience is as smooth as possible.",
+
+	"action": {
+			"default_popup": "./index.html"
+	}
+}
