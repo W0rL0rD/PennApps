@@ -22,23 +22,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 75%;
+  width: 67%;
   gap: 10px;
 }
 
 .card {
-  border: 1px solid lightblue;
   border-radius: 10px;
 }
 
 .head {
   margin: 0px;
   padding: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 800px;
 }
 
 .sub-head {
-  font-weight: 100;
+  font-weight: 200;
   font-style: italic;
   font-size: 16px;
   margin: 0;
@@ -48,16 +50,20 @@ body {
 
 .content {
   position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   background-color: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 10px;
-  padding: 0px;
-  padding-left: 60px;
+  padding: 10px;
   margin:10px;
   margin-top: 0px;
   width: 300px;
-  height: 100px;
+  height: 120px;
   cursor: pointer;
+  font-size: 14px;
+  text-align: justify;
+  overflow: auto;
 }
 
 .content::before {
