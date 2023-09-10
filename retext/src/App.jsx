@@ -19,13 +19,13 @@ function App() {
 
       console.log(highlightedText)
 
-      axios.post("http://127.0.0.1:8000/rectify", { sentence: highlightedText })
+      axios.post("https://pennapps.onrender.com/rectify", { sentence: highlightedText })
            .then(res => setRectified(res.data.completion))
 
-      axios.post("http://127.0.0.1:8000/concise", { sentence: highlightedText })
+      axios.post("https://pennapps.onrender.com/concise", { sentence: highlightedText })
            .then(res => setConcise(res.data.completion))
 
-      axios.post("http://127.0.0.1:8000/verbose", { sentence: highlightedText })
+      axios.post("https://pennapps.onrender.com/verbose", { sentence: highlightedText })
            .then(res => setVerbose(res.data.completion))
 
     }
@@ -38,13 +38,13 @@ function App() {
 
       console.log(highlightedText)
 
-      axios.post("http://127.0.0.1:8000/rectify", { sentence: highlightedText })
+      axios.post("http://retext-backend.netlify.app/rectify", { sentence: highlightedText })
            .then(res => setRectified(res.data.completion))
 
-      axios.post("http://127.0.0.1:8000/concise", { sentence: highlightedText })
+      axios.post("http://retext-backend.netlify.app/concise", { sentence: highlightedText })
            .then(res => setConcise(res.data.completion))
 
-      axios.post("http://127.0.0.1:8000/verbose", { sentence: highlightedText })
+      axios.post("http://retext-backend.netlify.app/verbose", { sentence: highlightedText })
            .then(res => setVerbose(res.data.completion))
     }
   }, [])
